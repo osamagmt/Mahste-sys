@@ -2748,7 +2748,7 @@ if(message.author.bot) return;
     channel: "chat"
 }
 const channel = sWlc[message.guild.id].channel
-  if (message.content.startsWith(prefix + "setwelcomer")) {
+  if (message.content.startsWith(prefix + "set")) {
     if(!message.member.hasPermission(`MANAGE_GUILD`)) return;
     let newChannel = message.content.split(' ').slice(1).join(" ")
     if(!newChannel) return message.reply(`**${prefix}setwelcomer <channel name>**`)
@@ -2810,9 +2810,9 @@ client.on("guildMemberAdd", member => {
                               ctx.font = '30px Arial';
                               ctx.fontSize = '28px';
                               ctx.fillStyle = "#FFFFFF";
-      ctx.fillText(`Welcome To ${member.guild.name}`, 245, 80);
+      ctx.fillText(`Welcome To ${member.guild.name}`, 200, 80);
       
-                              //AVATARً
+                              //AVATARً245
                               let Avatar = Canvas.Image;
                               let ava = new Avatar;
                               ava.src = buf;
